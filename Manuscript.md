@@ -228,21 +228,30 @@ Figure 8: Cloning was achieved using the pET-28a(+) expression vector utilizing 
 
 ##### Simulated immune response
 
-Across three doses, C-ImmSim predicted **[antibody titres: IgM / IgG levels and peak day]**, **[memory B-cell and T-helper trends]**, **[cytotoxic T-cell response]**, and **[cytokine levels]** for both constructs (Fig. 9). **[Which construct gave the higher response, if any.]**
+Across three doses, C-ImmSim predicted **[antibody titres: IgM / IgG levels and peak day]**, **[memory B-cell and T-helper trends]**, **[cytotoxic T-cell response]**, and **[cytokine levels]** for both constructs (Fig. 9).
 
-**How:** name the panels you cite (A to F). Keep it descriptive. Do not call the response “long-lasting protection”; say “predicted memory responses over the simulated period”.
+<img src="results/Immune-Simulation/MEV-1/IM-CM.png" alt="mev" width="700">
+
+
+
 3. Discussion
-Which construct is the better lead, and why (use the pass/borderline table).
-What the Trx tag does to the design: stability gain versus a large non-epitope component.
-How the findings compare with published in silico Klebsiella vaccine designs [add two or three references].
-Next steps: BLASTp of the epitopes against the human proteome, conservation across more K. pneumoniae genomes, population coverage, molecular dynamics, expression test.
-<!-- Reviewers of this kind of study usually ask for the human-proteome check and conservation analysis; mention them even if not done. -->
-4. Limitations
+We designed two Pal-based multi-epitope constructs and compared them across the same checks. MEV-1 scored slightly better on structure (92.45% against 91.02% favoured Ramachandran residues; MolProbity 1.95 against 2.00), while MEV-2 showed stronger predicted TLR4 binding (−51.36 against −24.05 kcal/mol) and a higher antigenicity score (0.636 against 0.557). **[State which you take forward and why.]** Several structural values sit close to their cut-offs, so both constructs are better described as within accepted ranges than as optimal.
+
+Only six epitopes survived filtering, and none were MHC-I. The constructs therefore rely on helper T-cell and B-cell epitopes, which limits how much a cytotoxic response can be expected to contribute. **[Say which filter removed the MHC-I candidates, and whether the simulated cytotoxic T-cell response matches this.]**
+
+Both constructs were unstable until a 109-residue thioredoxin tag was added [15]. The tag fixed the instability index, but it makes up about 34% of MEV-1 (109 of 320 residues) and 42% of MEV-2 (109 of 258), and none of it comes from _Klebsiella_. **[State whether Trx is meant to stay in the final vaccine or be cleaved.]** If it stays, its effect on the immune response and on cross-reactivity with the human thioredoxin homologue needs checking.
+
+The docking results should be read cautiously. HawkDock energies are model estimates, not measured affinities, and the receptor was a TLR4 monomer without MD-2. **[If confirmed: several contact residues lie in the GPGPG linker and the His-tag rather than the epitopes or adjuvant, so the predicted binding may not reflect the designed antigenic regions.]** Docking the adjuvants alone would give a baseline to compare against.
+
+Next steps are a BLASTp screen of the six epitopes against the human proteome, a check of conservation across more _K. pneumoniae_ genomes, population coverage analysis, molecular dynamics of the top construct, and expression tests in _E. coli_.
+
+
+3. Limitations
 Computational only; no expression, safety or immunogenicity data.
 Prediction tools depend on their training data; several score thresholds are conventions, not proofs.
 Docking used a TLR4 monomer without MD-2; no reference docking for comparison.
 C-ImmSim used default HLA alleles and a generic host.
-5. Conclusion
+4. Conclusion
 
 
 #### References
