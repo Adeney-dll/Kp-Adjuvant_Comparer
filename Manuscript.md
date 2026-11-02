@@ -182,13 +182,16 @@ Table 5: MEV structural validation
 
 MEV-1 and MEV-2 formed complexes with TLR4 (Fig. 6) with binding free energies of −24.05 and −51.36 kcal/mol (Table 6).
 
-**How:** report docking score and ΔG separately (MEV-1 scores better on one, MEV-2 on the other), and say which supports the choice of lead. If the contact residues fall in the linker or His-tag, say so here.
+| Construct | Receptor          | Docking Score | TLR4 (Chain A) Interface Residues                                                                                                                                                     | MEV Interface Residues                                                                                                 |
+| --------- | ----------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| MEV-1     | TLR4, (PDB: 4G8A) | -5323.90      | Lys21 Phe28 Ser45 Tyr46 Phe49 Pro52 Glu68 His203 His230 Arg231 Glu260 Glu261 Tyr377 Glu399 His400 Ile424 Glu448                                                                       | Ala88 Ala89 Thr90 Glu102 Ala106 Asn107 Gln112 Pro249 Gly250 Pro251 Gly252 Glu255 Gln266 Pro269 Gly270                  |
+| MEV-2     | TLR4, (PDB: 4G8A) | -3867.47      | Arg238 Glu244 Tyr266 Leu267 Asp268 Tyr269 Tyr270 Thr293 Lys315 Lys336 Gly337 Asn339 Asn383 Gly384 Asn407 His432 Arg434 Gly454 Asn455 Ser456 Phe457 Glu459 Asn460 Gln481 Glu483 Gln484 | Met239 Ser240 Ser241 Glu242 Glu243 Gln244 Ala245 Leu247 Gln248 Gln250 Gln251 Leu252 His253 His254 His255 His256 His257 |
 
-#### 3.6 Flexibility, codon optimisation and cloning
+##### Flexibility, codon optimisation and cloning
 
-> Normal mode analysis gave **[eigenvalue / deformation energy range]** for MEV-1 and **[range]** for MEV-2 (Fig. 7), indicating **[one-sentence reading]**. Codon optimisation raised GC content from 31.1% to 49.9% (MEV-1) and from 33.3% to 52.5% (MEV-2). Inserts of 972 and 786 bp (after adding NdeI and XhoI) were cloned into the 5,289-bp pET-28a(+) backbone (Fig. 8, Table 7); **[digest fragment sizes]**.
+ Normal mode analysis gave **[eigenvalue / deformation energy range]** for MEV-1 and **[range]** for MEV-2 (Fig. 7), indicating **[one-sentence reading]**. Codon optimisation raised GC content from 31.1% to 49.9% (MEV-1) and from 33.3% to 52.5% (MEV-2). Inserts of 972 and 786 bp (after adding NdeI and XhoI) were cloned into the 5,289-bp pET-28a(+) backbone (Fig. 8, Table 7); **[digest fragment sizes]**.
 
-#### 3.7 Simulated immune response
+##### Simulated immune response
 
 > Across three doses, C-ImmSim predicted **[antibody titres: IgM / IgG levels and peak day]**, **[memory B-cell and T-helper trends]**, **[cytotoxic T-cell response]**, and **[cytokine levels]** for both constructs (Fig. 9). **[Which construct gave the higher response, if any.]**
 
@@ -205,24 +208,6 @@ Prediction tools depend on their training data; several score thresholds are con
 Docking used a TLR4 monomer without MD-2; no reference docking for comparison.
 C-ImmSim used default HLA alleles and a generic host.
 5. Conclusion
-
-[Two sentences, no new claims.]
-
-Data and code availability
-
-Scripts, inputs and raw outputs: scripts/, data/, results/ in this repository.
-
-Figure plan
-Fig.	Content	File	Status
-1	Workflow	results/Workflow-chart.png	exists
-2	Alignment and SignalP	results/raw_images/, results/	exists, rename files
-3	Construct schematic	results/Construct_schematic.png	to make
-4	Epitope funnel	results/Epitope_funnel.png	to make
-5	AlphaFold and SOPMA	results/Structures/	exists, add pLDDT
-6	Docking complexes	results/Structures/Docking/	exists
-7	Normal modes	results/Normal-mode-analysis/	exists
-8	Plasmid maps	results/Cloning/	exists
-9	Immune simulation	results/Immune-Simulation/	exists
 
 
 #### References
